@@ -1,0 +1,18 @@
+#count the number of primes in the given list 
+l=[]
+n=int(input('enter the size of the list:'))
+print('enter the',n,'elements into list:')
+for i in range(n):
+     x=int(input())
+     l.append(x)
+
+p=[]
+c=0
+for i in l:
+     for j in range(2,i):
+          if i%j==0:
+             break
+     else:
+         c+=1    
+         p.append(i)     
+print("the number of prime numbers  in the list is: ","len(p):",len(p),"or c:",c)
